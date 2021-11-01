@@ -12,8 +12,8 @@ class Realisation(models.Model):
     title = models.CharField(max_length=120)
     lieu = models.CharField(max_length=120)
     date = models.DateField()
-    photo_before = models.CharField(max_length=300)
-    photo_after = models.CharField(max_length=300)
+    photo_before = models.FileField(upload_to = 'photos')
+    photo_after = models.FileField(upload_to = 'photos')
     description = models.TextField()
 # imageField image = models.ImageField(upload_to="products/%Y/%m/%d", blank=True)
     def _str_(self):
